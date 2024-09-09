@@ -1,5 +1,5 @@
-import ActiveDip from "../../assets/images/active/dip-active.png"
-import HighlightDip from "../../assets/images/finger_highlight/dip-highlight.png"
+import ActiveDip from "../../assets/images/finger_active/dip-active.png";
+import HighlightDip from "../../assets/images/finger_highlight/dip-highlight.png";
 
 interface FingerDipProps {
     isShowHighlightDip: boolean
@@ -33,7 +33,7 @@ const FingerDip = (props: FingerDipProps): JSX.Element => {
 
         </>
 
-    )
-}
+    );
+};
 
 export default FingerDip;

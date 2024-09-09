@@ -1,5 +1,5 @@
-import ActiveLUQ from "../../assets/images/abdominal_active/luq-active.png"
-import HighlightLUQ from "../../assets/images/abdominal_highlight/luq-highlight.png"
+import ActiveLUQ from "../../assets/images/abdominal_active/luq-active.png";
+import HighlightLUQ from "../../assets/images/abdominal_highlight/luq-highlight.png";
 
 interface LUQProps {
     isShowHighlightLUQ: boolean
@@ -15,22 +15,21 @@ const LUQ = (props: LUQProps): JSX.Element => {
                     style={{
                         opacity: isShowHighlightLUQ ? 1 : 0
                     }}
-                    alt="dip-active"
+                    alt="luq-active"
                 />
             </div>}
             <img src={HighlightLUQ}
-                onClick={() => _handleOnClickAbsPart("LUQ")}
+                onClick={(): void => _handleOnClickAbsPart("LUQ")}
 
                 className="absolute top-[238.8px] left-[210px] w-[58px]"
                 style={{
                     opacity: isShowHighlightLUQ ? 1 : 0
                 }}
-                alt="dip-highlight"
+                alt="luq-highlight"
             />
         </div>
 
-
-    )
-}
+    );
+};
 
 export default LUQ;

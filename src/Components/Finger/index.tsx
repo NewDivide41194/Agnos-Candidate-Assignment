@@ -1,38 +1,34 @@
 import { useState } from "react";
 
-
-import DefaultFinger from "../../assets/images/base_location/default-finger.png"
-
 import FingerDip from "./dip";
 import FingerMcp from "./mcp";
 import FingerPip from "./pip";
 
 const Finger = (): JSX.Element => {
-
     const [isShowHighlightDip, setIsShowHighlightDip] = useState<boolean>(false);
     const [isShowHighlightPip, setIshShowHighlightPip] = useState<boolean>(false);
     const [isShowHighlightMcp, setIsShowHighlightMcp] = useState<boolean>(false);
 
     console.log(isShowHighlightDip);
-    const _handleOnClickDip = () => {
-        setIsShowHighlightDip(!isShowHighlightDip)
-    }
+    const _handleOnClickDip = (): void => {
+        setIsShowHighlightDip(!isShowHighlightDip);
+    };
 
-    const _handleOnClickPip = () => {
-        setIshShowHighlightPip(!isShowHighlightPip)
-    }
+    const _handleOnClickPip = (): void => {
+        setIshShowHighlightPip(!isShowHighlightPip);
+    };
 
-    const _handleOnClickMcp = () => {
-        setIsShowHighlightMcp(!isShowHighlightMcp)
-    }
+    const _handleOnClickMcp = (): void => {
+        setIsShowHighlightMcp(!isShowHighlightMcp);
+    };
 
-    const _handleSelectAll = () => {
-        setIsShowHighlightDip(true)
-        setIshShowHighlightPip(true)
-        setIsShowHighlightMcp(true)
-    }
+    const _handleSelectAll = (): void => {
+        setIsShowHighlightDip(true);
+        setIshShowHighlightPip(true);
+        setIsShowHighlightMcp(true);
+    };
 
-    const isSelectedAll = isShowHighlightDip && isShowHighlightMcp && isShowHighlightPip
+    const isSelectedAll = isShowHighlightDip && isShowHighlightMcp && isShowHighlightPip;
 
     return (
         <div className={"shadow p-4 relative z-0 text-center rounded-xl "}
@@ -52,7 +48,10 @@ const Finger = (): JSX.Element => {
                 isShowHighlightMcp={isShowHighlightMcp}
                 isSelectedAll={isSelectedAll}
                 _handleOnClickMcp={_handleOnClickMcp} />
-            <img src={DefaultFinger} alt="default-finger" className="h-[400px]" />
+            <img
+                src={require("../../assets/images/base_location/default-finger.png")}
+                alt="default-finger"
+                className="h-[400px]" />
             <button
                 id="select-all"
                 className={isSelectedAll
@@ -64,7 +63,7 @@ const Finger = (): JSX.Element => {
                 ข้อต่ออื่นๆ หรือไม่มีอาการปวดบริเวณข้อ
             </button>
         </div>
-    )
-}
+    );
+};
 
 export default Finger;

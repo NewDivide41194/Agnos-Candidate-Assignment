@@ -1,5 +1,5 @@
-import ActiveRLQ from "../../assets/images/abdominal_active/rlq-active.png"
-import HighlightRLQ from "../../assets/images/abdominal_highlight/rlq-highlight.png"
+import ActiveRLQ from "../../assets/images/abdominal_active/rlq-active.png";
+import HighlightRLQ from "../../assets/images/abdominal_highlight/rlq-highlight.png";
 
 interface RLQProps {
     isShowHighlightRLQ: boolean
@@ -19,7 +19,7 @@ const RLQ = (props: RLQProps): JSX.Element => {
                 />
             </div>}
             <img src={HighlightRLQ}
-                onClick={() => _handleOnClickAbsPart("RLQ")}
+                onClick={(): void => _handleOnClickAbsPart("RLQ")}
                 className="absolute top-[304px] left-[126px] w-[58px]"
                 style={{
                     opacity: isShowHighlightRLQ ? 1 : 0
@@ -28,8 +28,7 @@ const RLQ = (props: RLQProps): JSX.Element => {
             />
         </div>
 
-
-    )
-}
+    );
+};
 
 export default RLQ;

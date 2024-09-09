@@ -1,5 +1,5 @@
-import ActiveMcp from "../../assets/images/active/mcp-active.png"
-import HighlightMcp from "../../assets/images/finger_highlight/mcp-highlight.png"
+import ActiveMcp from "../../assets/images/finger_active/mcp-active.png";
+import HighlightMcp from "../../assets/images/finger_highlight/mcp-highlight.png";
 
 interface FingerMcpProps {
     isShowHighlightMcp: boolean
@@ -32,7 +32,7 @@ const FingerMcp = (props: FingerMcpProps): JSX.Element => {
 
         </>
 
-    )
-}
+    );
+};
 
 export default FingerMcp;

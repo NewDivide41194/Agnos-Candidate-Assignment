@@ -1,11 +1,12 @@
-import ActivePip from "../../assets/images/active/pip-active.png"
-import HighlightPip from "../../assets/images/finger_highlight/pip-highlight.png"
+import ActivePip from "../../assets/images/finger_active/pip-active.png";
+import HighlightPip from "../../assets/images/finger_highlight/pip-highlight.png";
 
 interface FingerPipProps {
     isShowHighlightPip: boolean
     isSelectedAll: boolean
     _handleOnClickPip: () => void
 }
+
 const FingerPip = (props: FingerPipProps): JSX.Element => {
     const { isShowHighlightPip, isSelectedAll, _handleOnClickPip } = props;
     return (
@@ -30,7 +31,7 @@ const FingerPip = (props: FingerPipProps): JSX.Element => {
                 />
             </div>
         </>
-    )
-}
+    );
+};
 
 export default FingerPip;

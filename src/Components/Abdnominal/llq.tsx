@@ -1,5 +1,5 @@
-import ActiveLLQ from "../../assets/images/abdominal_active/llq-active.png"
-import HighlightLLQ from "../../assets/images/abdominal_highlight/llq-highlight.png"
+import ActiveLLQ from "../../assets/images/abdominal_active/llq-active.png";
+import HighlightLLQ from "../../assets/images/abdominal_highlight/llq-highlight.png";
 
 interface LLQProps {
     isShowHighlightLLQ: boolean
@@ -19,7 +19,7 @@ const LLQ = (props: LLQProps): JSX.Element => {
                 />
             </div>}
             <img src={HighlightLLQ}
-                onClick={() => _handleOnClickAbsPart("LLQ")}
+                onClick={(): void => _handleOnClickAbsPart("LLQ")}
                 className="absolute top-[304.5px] left-[211.3px] w-[55.5px]"
                 style={{
                     opacity: isShowHighlightLLQ ? 1 : 0
@@ -28,8 +28,7 @@ const LLQ = (props: LLQProps): JSX.Element => {
             />
         </div>
 
-
-    )
-}
+    );
+};
 
 export default LLQ;

@@ -1,5 +1,5 @@
-import ActiveEpigastrium from "../../assets/images/abdominal_active/epigastrium-active.png"
-import HighlightEpigastrium from "../../assets/images/abdominal_highlight/epigastrium-highlight.png"
+import ActiveEpigastrium from "../../assets/images/abdominal_active/epigastrium-active.png";
+import HighlightEpigastrium from "../../assets/images/abdominal_highlight/epigastrium-highlight.png";
 
 interface EpigastriumProps {
     isShowHighlightEpigastrium: boolean
@@ -15,21 +15,20 @@ const Epigastrium = (props: EpigastriumProps): JSX.Element => {
                     style={{
                         opacity: isShowHighlightEpigastrium ? 1 : 0
                     }}
-                    alt="dip-active"
+                    alt="epigastrium-active"
                 />
             </div>}
             <img src={HighlightEpigastrium}
-                onClick={() => _handleOnClickAbsPart("Epigastrium")}
+                onClick={(): void => _handleOnClickAbsPart("Epigastrium")}
                 className="absolute top-[204px] left-[167px] w-[61px]"
                 style={{
                     opacity: isShowHighlightEpigastrium ? 1 : 0
                 }}
-                alt="dip-highlight"
+                alt="epigastrium-highlight"
             />
         </div>
 
-
-    )
-}
+    );
+};
 
 export default Epigastrium;

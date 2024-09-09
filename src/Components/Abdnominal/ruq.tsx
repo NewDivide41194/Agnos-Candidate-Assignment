@@ -1,5 +1,5 @@
-import ActiveRuq from "../../assets/images/abdominal_active/ruq-active.png"
-import HighlightRuq from "../../assets/images/abdominal_highlight/ruq-highlight.png"
+import ActiveRuq from "../../assets/images/abdominal_active/ruq-active.png";
+import HighlightRuq from "../../assets/images/abdominal_highlight/ruq-highlight.png";
 
 interface RuqProps {
     isShowHighlightRuq: boolean
@@ -19,7 +19,7 @@ const Ruq = (props: RuqProps): JSX.Element => {
                 />
             </div>}
             <img src={HighlightRuq}
-                onClick={() => _handleOnClickAbsPart("Ruq")}
+                onClick={(): void => _handleOnClickAbsPart("Ruq")}
                 className="absolute top-[242px] left-[126.4px] w-[62px]"
                 style={{
                     opacity: isShowHighlightRuq ? 1 : 0
@@ -28,8 +28,7 @@ const Ruq = (props: RuqProps): JSX.Element => {
             />
         </div>
 
-
-    )
-}
+    );
+};
 
 export default Ruq;

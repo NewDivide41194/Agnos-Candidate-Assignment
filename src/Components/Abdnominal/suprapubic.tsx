@@ -1,5 +1,5 @@
-import ActiveSuprapubic from "../../assets/images/abdominal_active/suprapubic-active.png"
-import HighlightSuprapubic from "../../assets/images/abdominal_highlight/suprapubic-highlight.png"
+import ActiveSuprapubic from "../../assets/images/abdominal_active/suprapubic-active.png";
+import HighlightSuprapubic from "../../assets/images/abdominal_highlight/suprapubic-highlight.png";
 
 interface SuprapubicProps {
     isShowHighlightSuprapubic: boolean
@@ -19,7 +19,7 @@ const Suprapubic = (props: SuprapubicProps): JSX.Element => {
                 />
             </div>}
             <img src={HighlightSuprapubic}
-                onClick={() => _handleOnClickAbsPart("Suprapubic")}
+                onClick={(): void => _handleOnClickAbsPart("Suprapubic")}
                 className="absolute bottom-[140.5px] left-[169px] w-[58px]"
                 style={{
                     opacity: isShowHighlightSuprapubic ? 1 : 0
@@ -28,8 +28,7 @@ const Suprapubic = (props: SuprapubicProps): JSX.Element => {
             />
         </div>
 
-
-    )
-}
+    );
+};
 
 export default Suprapubic;

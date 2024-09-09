@@ -1,9 +1,9 @@
 import { Home } from "./Pages";
 
-function App() {
+function App(): JSX.Element {
   return (
     <div className="container mx-auto">
-      <Home/>
+      <Home />
     </div>
   );
 }

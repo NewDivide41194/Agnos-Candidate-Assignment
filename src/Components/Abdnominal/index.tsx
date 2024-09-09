@@ -1,14 +1,12 @@
 import { useState } from "react";
 
-
-import DefaultAbdnominal from "../../assets/images/base_location/default-abs.png"
 import Epigastrium from "./epigastrium";
 import LLQ from "./llq";
 import LUQ from "./luq";
 import RLQ from "./rlq";
-import Suprapubic from "./suprapubic"
-import Umbilicus from "./umbilibus";
 import Ruq from "./ruq";
+import Suprapubic from "./suprapubic";
+import Umbilicus from "./umbilibus";
 
 const Abdnominal = (): JSX.Element => {
     const [absRecord, setAbsRecord] = useState<Record<string, boolean>>({
@@ -21,35 +19,56 @@ const Abdnominal = (): JSX.Element => {
         isShowRuq: false
     });
 
-    const _handleOnClickAbsPart = (part: string) => {
+    const _handleOnClickAbsPart = (part: string): void => {
         switch (part) {
             case "Epigastrium":
-                setAbsRecord({ ...absRecord, isShowEpigastrium: !absRecord.isShowEpigastrium })
-                break
+                setAbsRecord({
+                    ...absRecord,
+                    isShowEpigastrium: !absRecord.isShowEpigastrium
+                });
+                break;
             case "LLQ":
-                setAbsRecord({ ...absRecord, isShowLlq: !absRecord.isShowLlq })
-                break
+                setAbsRecord({
+                    ...absRecord,
+                    isShowLlq: !absRecord.isShowLlq
+                });
+                break;
             case "LUQ":
-                setAbsRecord({ ...absRecord, isShowLuq: !absRecord.isShowLuq })
-                break
+                setAbsRecord({
+                    ...absRecord,
+                    isShowLuq: !absRecord.isShowLuq
+                });
+                break;
             case "RLQ":
-                setAbsRecord({ ...absRecord, isShowRlq: !absRecord.isShowRlq })
-                break
+                setAbsRecord({
+                    ...absRecord,
+                    isShowRlq: !absRecord.isShowRlq
+                });
+                break;
             case "Suprapubic":
-                setAbsRecord({ ...absRecord, isShowSuprapubic: !absRecord.isShowSuprapubic })
-                break
+                setAbsRecord({
+                    ...absRecord,
+                    isShowSuprapubic: !absRecord.isShowSuprapubic
+                });
+                break;
             case "Umbilicus":
-                setAbsRecord({ ...absRecord, isShowUmbilicus: !absRecord.isShowUmbilicus })
-                break
+                setAbsRecord({
+                    ...absRecord,
+                    isShowUmbilicus: !absRecord.isShowUmbilicus
+                });
+                break;
             case "Ruq":
-                setAbsRecord({ ...absRecord, isShowRuq: !absRecord.isShowRuq })
-                break
+                setAbsRecord({
+                    ...absRecord,
+                    isShowRuq: !absRecord.isShowRuq
+                });
+                break;
             default:
-                break
+                break;
         }
-    }
+    };
 
-    const _handleSelectAll = () => {
+    const _handleSelectAll = (): void => {
         setAbsRecord({
             isShowEpigastrium: true,
             isShowLlq: true,
@@ -58,13 +77,13 @@ const Abdnominal = (): JSX.Element => {
             isShowSuprapubic: true,
             isShowUmbilicus: true,
             isShowRuq: true
-        })
-    }
+        });
+    };
 
     const isSelectedAll = Object.values(absRecord).every((val: boolean) => val === true);
 
     return (
-        <div className="shadow p-4 relative z-0 text-center rounded-xl" style={{minWidth:413}}>
+        <div className="shadow p-4 relative z-0 text-center rounded-xl" style={{ minWidth: 413 }}>
             <div className="mb-2">
                 นิ้วของคุณเจ็บตรงไหนมากที่สุด?
             </div>
@@ -96,7 +115,10 @@ const Abdnominal = (): JSX.Element => {
                 isShowHighlightRuq={absRecord.isShowRuq}
                 isSelectedAll={isSelectedAll}
                 _handleOnClickAbsPart={_handleOnClickAbsPart} />
-            <img src={DefaultAbdnominal} alt="default-abs" className="h-[400px]" />
+            <img
+                src={require("../../assets/images/base_location/default-abs.png")}
+                alt="default-abs"
+                className="h-[400px]" />
             <button
                 className={isSelectedAll
                     ?
@@ -107,7 +129,7 @@ const Abdnominal = (): JSX.Element => {
                 ปวดท้อง
             </button>
         </div>
-    )
-}
+    );
+};
 
 export default Abdnominal;

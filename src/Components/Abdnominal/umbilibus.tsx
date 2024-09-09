@@ -1,5 +1,5 @@
-import ActiveUmbilicus from "../../assets/images/abdominal_active/umbilicus-active.png"
-import HighlightUmbilicus from "../../assets/images/abdominal_highlight/umbilicus-highlight.png"
+import ActiveUmbilicus from "../../assets/images/abdominal_active/umbilicus-active.png";
+import HighlightUmbilicus from "../../assets/images/abdominal_highlight/umbilicus-highlight.png";
 
 interface UmbilicusProps {
     isShowHighlightUmbilicus: boolean
@@ -19,7 +19,7 @@ const Umbilicus = (props: UmbilicusProps): JSX.Element => {
                 />
             </div>}
             <img src={HighlightUmbilicus}
-                onClick={() => _handleOnClickAbsPart("Umbilicus")}
+                onClick={(): void => _handleOnClickAbsPart("Umbilicus")}
                 className="absolute top-[280.2px] left-[176.4px] w-[43px]"
                 style={{
                     opacity: isShowHighlightUmbilicus ? 1 : 0
@@ -28,8 +28,7 @@ const Umbilicus = (props: UmbilicusProps): JSX.Element => {
             />
         </div>
 
-
-    )
-}
+    );
+};
 
 export default Umbilicus;
