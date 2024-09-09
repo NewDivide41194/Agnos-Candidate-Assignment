@@ -64,7 +64,7 @@ const Abdnominal = (): JSX.Element => {
     const isSelectedAll = Object.values(absRecord).every((val: boolean) => val === true);
 
     return (
-        <div className="shadow p-4 relative z-0 text-center rounded-xl">
+        <div className="shadow p-4 relative z-0 text-center rounded-xl" style={{minWidth:413}}>
             <div className="mb-2">
                 นิ้วของคุณเจ็บตรงไหนมากที่สุด?
             </div>
@@ -96,7 +96,7 @@ const Abdnominal = (): JSX.Element => {
                 isShowHighlightRuq={absRecord.isShowRuq}
                 isSelectedAll={isSelectedAll}
                 _handleOnClickAbsPart={_handleOnClickAbsPart} />
-            <img src={DefaultAbdnominal} alt="default-finger" className="h-[400px]" />
+            <img src={DefaultAbdnominal} alt="default-abs" className="h-[400px]" />
             <button
                 className={isSelectedAll
                     ?

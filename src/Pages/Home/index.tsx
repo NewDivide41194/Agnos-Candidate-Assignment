@@ -22,13 +22,14 @@ const HomePage = (): JSX.Element => {
                     <Abdnominal />
             }
             <div className="w-full text-center py-4">
-                {page === 1 ? <button className="rounded-xl p-2 px-4 shadow"
-                    style={{ width: 326 }}
-                    onClick={_handleOnClickNext}>
-                    ต่อไป
-                </button> :
-                    <button className="rounded-xl p-2 px-4 shadow"
-                        style={{ width: 413 }}
+                {page === 1 ?
+                    <button className="w-full rounded-xl p-2 px-4 shadow"
+                        style={{ maxWidth: 326, minWidth:20 }}
+                        onClick={_handleOnClickNext}>
+                        ต่อไป
+                    </button> :
+                    <button className="w-full rounded-xl p-2 px-4 shadow"
+                        style={{ maxWidth: 413, minWidth:20 }}
                         onClick={_handleOnClickFinish}>
                         เสร็จแล้ว
                     </button>}

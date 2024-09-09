@@ -35,7 +35,8 @@ const Finger = (): JSX.Element => {
     const isSelectedAll = isShowHighlightDip && isShowHighlightMcp && isShowHighlightPip
 
     return (
-        <div className={"shadow p-4 relative z-0 text-center rounded-xl"}>
+        <div className={"shadow p-4 relative z-0 text-center rounded-xl "}
+            style={{ minWidth: 330 }}>
             <div className="mb-2">
                 นิ้วของคุณเจ็บตรงไหนมากที่สุด?
             </div>
